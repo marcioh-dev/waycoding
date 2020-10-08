@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Desenvolvimento de Sites, Emails Personalizados e Hospedagem Web">
+    <meta name="author" content="Márcio Henrique">
+    <meta name="keywords"
+        content="site, criacao, desenvolvimento, web, hospedagem, email, webmail, waycoding, criar, desenvolver, marketing, digital">
+
+    <!-- Ícone de Aba -->
+    <link rel="icon" href="img/logo/favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/animacoes.css">
+
+    <!-- Ícons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"
+        integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
+        crossorigin="anonymous"></script>
+
+    <!-- Biblioteca efeitos JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Título da Página -->
+    <title>Waycoding - Home</title>
+
+    <!-- Efeito máquina de escrever -->
+    <script type="text/javascript">
+        window.onload = function () {
+            var txtTitulo = 'Bem vindo(a) à Waycoding!';
+            var txt1 = document.getElementById("escrever");
+
+            var speed = 150;
+            var cont = 0;
+
+            function typeWriter() {
+                if (cont < txtTitulo.length) {
+                    txt1.innerHTML += txtTitulo.charAt(cont);
+                    cont++;
+                    setTimeout(typeWriter, speed);
+                } else {
+                    cont = 0;
+                }
+            }
+            typeWriter();
+        };
+    </script>
+
+    <!-- Botão Topo -->
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Ir ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <a href="https://api.whatsapp.com/send?phone=5531973606459" target="_blank" class="btnWhats">
+        <i style="margin-top:16px" class="fab fa-whatsapp"></i>
+    </a>
+
+    <button onclick="whatsFunction()" id="whats" title="Whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#home">
+            <img src="img/logo/logo.svg" height="50" alt="Logo">
+        </a>
+
+        <!-- Botão Toggle (Menu Hambúrguer) -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav nav-tabs">
+                <li class="nav-item active m-1">
+                    <a class="nav-link" href="#home">
+                        <i class="fas fa-home"></i>
+                        HOME <span class="sr-only">(Página atual)</span>
+                    </a>
+                </li>
+                <li class="nav-item m-1">
+                    <a class="nav-link" href="#sobre">
+                        <i class="fas fa-building"></i>
+                        SOBRE
+                    </a>
+                </li>
+                <li class="nav-item m-1">
+                    <a class="nav-link" href="#servicos">
+                        <i class="fas fa-tools"></i>
+                        SERVIÇOS
+                    </a>
+                </li>
+                <li class="nav-item m-1">
+                    <a class="nav-link" href="#clientes">
+                        <i class="fas fa-users"></i>
+                        CLIENTES
+                    </a>
+                </li>
+                <li class="nav-item m-1">
+                    <a class="nav-link" href="#contato">
+                        <i class="fas fa-envelope-open-text"></i>
+                        CONTATO
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção Home -->
+    <section id="home">
+        <div class="container">
+
+            <!-- Vídeo de Fundo -->
+            <video autoplay muted loop id="myVideo">
+                <source src="./video/video.mp4" type="video/mp4">
+            </video>
+
+            <!-- Títulos com efeitos -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <h3 id="escrever" class="titulo1 escrever pt-4"></h3>
+                        <h1 class="titulo2 bounceInUp mb-5">O MELHOR CAMINHO <br> PARA O SEU NEGÓCIO!</h1>
+                        <h4 class="titulo3 bounceInRight mb-5">Criamos o site que você precisa!</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão Home -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center m-3">
+                        <a href="#sobre">
+                            <button type="button" class="btn btn-warning btn-lg botoes tada">
+                                <i class="fas fa-compass rotateIn"></i>
+                                Quero saber mais!
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <div class="container">
+
+            <!-- Título -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center titulos-secoes">
+                        <i class="fas fa-building"></i>
+                        SOBRE A <img src="./img/logo/texto-logo.svg" alt="Waycoding" height="70px">
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- Bússola com efeito girando -->
+                <div class="col-sm-6">
+                    <img src="./img/logo/bussola.png" class="img-fluid mx-auto d-block rotateIn bussola m-3"
+                        alt="Bússola" width="300px">
+                </div>
+
+                <div class="col-sm-6">
+                    <!-- Texto Sobre -->
+                    <p class="text-justify texto-sobre mb-3">
+                        A Waycoding é formada por uma equipe de profissionais capacitados que trazem para você a solução
+                        que a sua empresa precisa.
+                    </p>
+                    <p class="text-justify texto-sobre mb-3">
+                        Porque ter um site é mais do que simplesmente fazer uma propaganda,
+                        é estabelecer um caminho que liga você até seus clientes de diversas formas;
+                        além de te possibilitar captar novos clientes.
+                    </p>
+                    <p class="text-justify texto-sobre mb-3">
+                        Por isso, a Waycoding literalmente "codifica" o caminho da sua empresa ao sucesso.
+                        <strong>Clique no botão abaixo e veja como é fácil ter o site que vai fazer sua empresa
+                            decolar!</strong>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Botão Serviços -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center m-3">
+                        <a href="#contato">
+                            <button type="button" class="btn btn-warning btn-lg botoes tada">
+                                <i class="fas fa-compass rotateIn"></i>
+                                Quero captar <br> novos clientes!
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos">
+        <div class="container">
+
+            <!-- Título -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center titulos-secoes titulo-branco">
+                        <i class="fas fa-tools"></i>
+                        SERVIÇOS QUE OFERECEMOS
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Cards -->
+                    <div class="card-deck m-3">
+                        <div class="card pulse">
+                            <img class="card-img-top" src="./img/cards/card1.jpg" alt="Imagem de capa do card">
+                            <div class="card-body">
+                                <h5 class="card-title">Sites Profissionais</h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Sites Responsivos (adaptam à diversos tamanhos de telas)</li>
+                                        <li>Otimizados para o Google</li>
+                                        <li>Design atraente e intuitivo</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card pulse">
+                            <img class="card-img-top" src="./img/cards/card2.jpg"
+                                alt="IFoto de Miguel Á. Padriñán de Pexels">
+                            <div class="card-body">
+                                <h5 class="card-title">Hospedagem Web</h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Segurança garantida</li>
+                                        <li>Backup diário</li>
+                                        <li>Certificado SSL</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Card Deck -->
+                </div>
+            </div>
+            <!-- Fim row -->
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Cards -->
+                    <div class="card-deck m-3">
+                        <div class="card pulse">
+                            <img class="card-img-top" src="./img/cards/card3.jpg" alt="Imagem de capa do card">
+                            <div class="card-body">
+                                <h5 class="card-title">E-mails Corporativos</h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Segurança e controle do seu e-mail</li>
+                                        <li>Credibilidade para o seu endereço eletrônico</li>
+                                        <li>Canal de comunicação do seu negócio que fortalece a sua marca</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card pulse">
+                            <img class="card-img-top" src="./img/cards/card4.jpg" alt="Imagem de capa do card">
+                            <div class="card-body">
+                                <h5 class="card-title">Cartão de Visita Digital</h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>PDF fácil de compartilhar pelo celular ou computador</li>
+                                        <li>Muito interativo, com links de redirecionamento para o seu site ou para as
+                                            suas redes sociais</li>
+                                        <li>Compartilhamento ilimitado</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Card Deck -->
+                </div>
+            </div>
+            <!-- Fim row -->
+
+            <!-- Botão Serviços -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center m-3">
+                        <a href="https://api.whatsapp.com/send?phone=5531973606459">
+                            <button type="button" class="btn btn-warning btn-lg botoes tada">
+                                <i class="fas fa-compass rotateIn"></i>
+                                Peça um orçamento!
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Fim Container -->
+    </section>
+
+    <!-- Seção Clientes -->
+    <section id="clientes">
+        <div class="container">
+            <!-- Título -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center titulos-secoes">
+                        <i class="fas fa-users"></i>
+                        ALGUNS DE NOSSOS CLIENTES
+                    </h2>
+                </div>
+            </div>
+            <!-- Clientes -->
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                    <a href="https://bhmarmores.com.br" target="_blank">
+                        <img src="./img/clientes/bhmarmores.png" alt="Logo BH Mármores"
+                            class="img-clientes img-fluid m-2 border rounded">
+                    </a>
+                </div>
+
+                <div class="col-sm-4 text-center">
+                    <a href="https://www.feiravirtualdabeleza.com.br/" target="_blank">
+                        <img src="./img/clientes/gil.png" alt="Logo Feira Virtual da Beleza"
+                            class="img-clientes img-fluid m-2 border rounded">
+                    </a>
+                </div>
+
+                <div class="col-sm-4 text-center">
+                    <a href="#clientes">
+                        <img src="./img/clientes/logo-Mimi.png" alt="Logo MB Beaty"
+                            class="img-clientes img-fluid m-2 border rounded">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <!-- Título -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 texto-contato">
+                    <h2>Quero receber <br> uma proposta gratuita!</h2>
+                    <h6>Fale com um consultor.</h6>
+                </div>
+
+                <div class="col-sm-2 seta-contato">
+                    <i class="fas fa-angle-double-right"></i>
+                </div>
+
+                <div class="col-sm-4">
+                    <a href="https://api.whatsapp.com/send?phone=5531973606459">
+                        <button type="button" class="btn btn-warning btn-lg botoes tada">
+                            <i class="fas fa-compass rotateIn"></i>
+                            Solicite uma <br> proposta!
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container rodape">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="img/logo/logo.svg" class="logo-rodape" height="60" alt="Logo">
+                </div>
+                <div class="col-sm-3 mt-1">
+                    <h6>Fale Conosco:</h6>
+                    <span class="icones-rodape">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <a href="tel:031973606459" class="tel-rodape">(31) 97360-6459</a> <br>
+
+                    <span class="icones-rodape">
+                        <i class="far fa-envelope"></i>
+                    </span>
+                    contato@waycoding.com.br
+                </div>
+
+                <div class="col-sm-2 mt-1">
+                    <a href="https://pt-br.facebook.com/pg/waycoding/posts/" target="_blank">
+                        <span class="icones-redes icone-face m-5">
+                            <i class="fab fa-facebook shake"></i>
+                        </span>
+                    </a>
+
+                    <a href="https://www.instagram.com/waycoding_sites/" target="_blank">
+                        <span class="icones-redes icone-insta m-5">
+                            <i class="fab fa-instagram shake"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-sm-4 mt-1 sitemap">
+                    <h5>Menu</h5>
+                    <ul>
+                        <li>
+                            <a href="#home">
+                                <i class="fas fa-home"></i>
+                                HOME
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sobre">
+                                <i class="fas fa-building"></i>
+                                SOBRE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#servicos">
+                                <i class="fas fa-tools"></i>
+                                SERVIÇOS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#clientes">
+                                <i class="fas fa-users"></i>
+                                CLIENTES
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contato">
+                                <i class="fas fa-envelope-open-text"></i>
+                                CONTATO
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="linha-rodape">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="rodape-copyright text-center">Copyright © Waycoding 2019</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
